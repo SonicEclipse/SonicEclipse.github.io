@@ -21,3 +21,9 @@ a {
 td, tr, th {
     padding-right: 1.5em;
 }
+li {
+    display: inline-block;
+}
+ul {
+    white-space: nowrap;
+}
