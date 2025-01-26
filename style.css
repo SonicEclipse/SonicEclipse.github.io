@@ -21,3 +21,13 @@ a {
 td, tr, th {
     padding-right: 1.5em;
 }
+
+
+.credits-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .credits-list li {
+    margin: 0.5em 0;
+  }
