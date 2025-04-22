@@ -10,35 +10,32 @@
   </head>
   <body>
     <main>
-            <center>
-                <img src="media/logo.png" alt="Sonic Eclipse logo" width="25%">
-            </center>
-            <!--<hr/>-->
+      <div id="header-placeholder"></div>
 
-            <!-- Table of contents on one line --> 
-            <center><div class="toc" style="display: flex; justify-content: space-around; margin-top: 0em; width: 30%;">
-                <a href="index.html">Home</a>
-                <a href="play.html">Play</a>
-                <a href="downloads.html">Downloads</a>
-                <a href="archive.html">Archive</a>
-                <a href="credits.html">Credits</a>
-            </div></center>
-
-            <hr/>
-
-            <center>
-                <h1>Play on the Browser</h1>
+        <center>
                 <h3>Current version: Demo 2</h3>
-                <p>Experimental browser version of Sonic Eclipse. This version may not be up-to-date with the downloadable versions.</p>
+                <p style="margin-top:-1vw;">Experimental browser version of Sonic Eclipse. This version may not be up-to-date with the downloadable versions.</p>
                 <iframe src="game/index.html" width="1280" height="760" title="Sonic Eclipse on the Web"></iframe>
-                <hr/>
-                <p style="font-size: 0.5vw;">Website artwork by Kabuki. Game not affiliated with SEGA. Sonic the Hedgehog is a trademark of SEGA.</p>
-                <p style="font-size: 0.5vw;"><a href="https://dsc.gg/soniceclipse" style="font-size:0.5vw;">Discord server</a></p>
-                <script type="text/javascript" src="https://counter.websiteout.com/js/9/0/0/1"></script>
-                <br><br>
-            </center>
 
-        </main>
+                <p style="margin-top:-0.1vw;"><i>Note: This version is not fully optimized for mobile devices. For the best experience, please use a desktop browser.</i></p>
+        </center>
+        <div id="footer-placeholder"></div>
+      </main>
     <!--<script src="index.js"></script>-->
+    <script>
+    // Check if we can use fetch
+    if (window.fetch) {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data)
+        .catch(error => console.error('Error loading header:', error));
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+        .catch(error => console.error('Error loading footer:', error));
+    } else {
+      console.error('Fetch API not supported in this browser.');
+    }
+    </script>
   </body>
 </html>

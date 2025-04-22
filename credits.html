@@ -10,56 +10,30 @@
   </head>
   <body>
     <main>
-            <center>
-                <img src="media/logo.png" alt="Sonic Eclipse logo" width="25%">
-            </center>
-            <!--<hr/>-->
-
-            <!-- Table of contents on one line --> 
-            <center><div class="toc" style="display: flex; justify-content: space-around; margin-top: 0em; width: 30%;">
-                <a href="index.html">Home</a>
-                <a href="play.html">Play</a>
-                <a href="downloads.html">Downloads</a>
-                <a href="archive.html">Archive</a>
-                <a href="credits.html">Credits</a>
-            </div></center>
-
-            <hr/>
-
-            <center>
-                <h1>Credits</h1>
-                <h3>Sonic Eclipse</h3>
-                <ul class="credits-list">
-                  <li><strong>Acrylic:</strong> Director, Level Designer</li>
-                  <li><strong>ForFurtherNotice:</strong> Director</li>
-                  <li><strong>Trist:</strong> Musician, Playtester</li>
-                  <li><strong>LocalHuman:</strong> Musician</li>
-                  <li><strong>Voxd_56:</strong> Musician</li>
-                  <li><strong>Mahiopool:</strong> Musician, Playtester</li>
-                  <li><strong>BigSillyOrangeCat:</strong> Programmer, Musician</li>
-                  <li><strong>ProjectMobius13:</strong> Programmer</li>
-                  <li><strong>Samy:</strong> Artist</li>
-                  <li><strong>Kabuki:</strong> Render Artist</li>
-                  <li><strong>Reslan11112:</strong> Artist</li>
-                  <li><strong>Blued:</strong> Artist</li>
-                  <li><strong>MelonMan:</strong> Artist</li>
-                  <li><strong>Eight:</strong> Artist</li>
-                  <li><strong>Mitzy:</strong> Concept Artist</li>
-                  <li><strong>Destiny:</strong> Playtester</li>
-                </ul>
-                <hr/>
-                <h3>Website</h3>
-                <ul class="credits-list">
-                  <li><strong>Acrylic:</strong> Coding, Designing, Maintenance</li>
-                  <li><strong>Kabuki:</strong> Art for Downloads and Archive page</li>
-                </ul>
-                <hr/>
-                <p style="font-size: 0.5vw;">Website artwork by Kabuki. Game not affiliated with SEGA. Sonic the Hedgehog is a trademark of SEGA.</p>
-                <p style="font-size: 0.5vw;"><a href="https://dsc.gg/soniceclipse" style="font-size:0.5vw;">Discord server</a></p>
-                <script type="text/javascript" src="https://counter.websiteout.com/js/9/0/0/1"></script>
-                <br><br>
-            </center>
+      <div id="header-placeholder"></div>
+      <div class="body" style="width: 71%; margin: auto; text-align: left; padding-left: 20px; padding-top: 5px;">
+        <h3>THIS PAGE IS UNDER CONSTRUCTION</h3>
+        <img src="media/sonic-worker.png" alt="Sonic Worker" style="width: 50%; max-width: 200px; margin-top: 20px; margin-bottom: 20px; box-shadow: none;"/>
+        <p>We are currently working on this section of the website. Please check back later for updates!</p>
+        <p>In the meantime, feel free to explore the rest of the website or join our <a href="https://dsc.gg/soniceclipse">Discord server</a> for the latest news and updates.</p>
+      </div>
+      <div id="footer-placeholder"></div>
         </main>
+    <script>
+      // Check if we can use fetch
+      if (window.fetch) {
+        fetch('header.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('header-placeholder').innerHTML = data)
+          .catch(error => console.error('Error loading header:', error));
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+          .catch(error => console.error('Error loading footer:', error));
+      } else {
+        console.error('Fetch API not supported in this browser.');
+      }
+    </script>
     <!--<script src="index.js"></script>-->
   </body>
 </html>

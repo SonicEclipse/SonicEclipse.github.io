@@ -1,10 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap');
+
+main {
+    min-height: 100%;
+    padding-bottom: 60px;
+    z-index: 1;
+}
+
 body {
-    background-color: #000000;
+    background-color: #ffffff;
     margin-left: 1.5em;
     margin-top: 1em;
-    font-family: Arial, sans-serif;
-    color: #dddddd;
+    font-family: "Special Gothic", sans-serif;
+    font-weight: 400;
+    font-size: 1.35vw;
+    font-style: normal;
+    color: #000000;
+    zoom: 80%;
+    background-image: url('media/background.png');
+    background-size: cover;
+    animation: scroll 10s linear infinite; /* Infinite loop */
 }
+  
+  @keyframes scroll {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 200%;
+    }
+  }
+.header {
+    text-align: center;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 1vw;
+  }
+  
+  .logo {
+    width: 20vw;
+    margin-left: 9vw;
+    margin-right: 10vw;
+  }
+  
+  .toc {
+    display: flex;
+    justify-content: center;
+    gap: 5vw; /* Space between links */
+    flex-wrap: wrap;
+    margin-top: 0vw;
+  }
+  
+  .toc a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #49497e;
+  }
+  
+  h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 3.5vw;
+    margin-top: 0vw;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+  
 
 hr {
     color: #333333;
@@ -12,7 +75,7 @@ hr {
 }
 
 a {
-    color: #adadff;
+    color: #49497e;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.25vw;
@@ -31,3 +94,78 @@ td, tr, th {
   .credits-list li {
     margin: 0.5em 0;
   }
+
+.body img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 2%;
+    float: left;
+    margin-right: 1em;
+    /* Shadow*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 2vw;
+}
+.body table {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 2%;
+    float: left;
+    margin-right: 1em;
+    margin-right: 2vw;
+}
+
+footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* Light text color */
+    padding-top: 20px;
+    font-size: 0.9vw;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section {
+    margin: 10px 0;
+}
+
+.footer-text {
+    margin: 5px 0;
+}
+
+.footer-link {
+    color: #49A7FF; /* Light blue color */
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive media queries for smaller screens */
+@media (max-width: 768px) {
+    footer {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+    .footer-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 1.5em; /* Larger font size for very small screens */
+    }
+}

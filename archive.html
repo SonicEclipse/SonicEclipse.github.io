@@ -10,37 +10,16 @@
   </head>
   <body>
     <main>
-            <center>
-                <table>
-                    <tr>
-                        <img src="media/sonic-worker.png" alt="Sonic worker" width="8%">
-                        <img src="media/logo.png" alt="Sonic Eclipse logo" width="25%">
-                    </tr>
-                </table>
-            </center>
+        <div id="header-placeholder"></div>
 
-            <!--<hr/>-->
-
-             <!-- Table of contents on one line --> 
-            <center><div class="toc" style="display: flex; justify-content: space-around; margin-top: 0em; width: 30%;">
-                <a href="index.html">Home</a>
-                <a href="play.html">Play</a>
-                <a href="downloads.html">Downloads</a>
-                <a href="archive.html">Archive</a>
-                <a href="credits.html">Credits</a>
-            </div></center>
-
-            <hr/>
-
-            <center>
-                <h1>The Sonic Eclipse Archive</h1>
+        <div class="body" style="width: 71%; margin: auto; text-align: left; padding-left: 20px; padding-top: 5px;">
                 <p>
-                    Welcome to the Sonic Eclipse Archive! Here you will find a collection of previous versions, and other content related to the game's development.
-                    <br>Check back regularly for updates and new-old content!
+                    <strong>Welcome to the Sonic Eclipse Archive!</strong> Here you will find a collection of previous versions, and other content related to the game's development.
+                </p>
                 <hr/>
                 <h2>Previous Versions</h2>
                 <!-- Table -->
-                <table>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
                     <tr>
                         <th>File</th>
                         <th>Description</th>
@@ -72,14 +51,29 @@
                         <td>2024-09-12</td>
                     </tr>
                 </table>
-                <hr/>
-                <p style="font-size: 0.5vw;">Website artwork by Kabuki. Game not affiliated with SEGA. Sonic the Hedgehog is a trademark of SEGA.</p>
-                <p style="font-size: 0.5vw;"><a href="https://dsc.gg/soniceclipse" style="font-size:0.5vw;">Discord server</a></p>
-                <script type="text/javascript" src="https://counter.websiteout.com/js/9/0/0/1"></script>
-                <br><br>
-            </center>
+                <hr style="margin-top: 14.5vw;"/>
+                <p style="margin-top: 1.6vw;">
+                    <b>Check back regularly for new-old downloads!</b>
+                </p>
+            </div>
 
+            <div id="footer-placeholder"></div>
         </main>
+    <script>
+    // Check if we can use fetch
+    if (window.fetch) {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data)
+        .catch(error => console.error('Error loading header:', error));
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+        .catch(error => console.error('Error loading footer:', error));
+    } else {
+      console.error('Fetch API not supported in this browser.');
+    }
+    </script>
     <!--<script src="index.js"></script>-->
   </body>
 </html>
