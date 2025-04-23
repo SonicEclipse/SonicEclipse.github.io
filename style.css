@@ -117,10 +117,10 @@ td, tr, th {
     /* Shadow*/
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-right: 2vw;
-    transition: transform 0.05s ease-in-out;
+    transition: transform 0.05s ease-out;
 }
 .body img:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .body table {
     max-width: 100%;
