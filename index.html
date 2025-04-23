@@ -28,16 +28,17 @@
 
     <script>
       let currentPage = 1;
-      const totalPages = 2; // Set this to the number of pages/content you want
+      const totalPages = 2;
 
       // Function to load the content for each page
       function loadContent(page) {
-        fetch(`index/page${page}.html`)  // Assume you're storing page content as separate HTML files
+        fetch(`index/page${page}.html`)
           .then(response => response.text())
           .then(data => {
             document.getElementById('page-content').innerHTML = data;
           })
           .catch(error => console.error('Error loading page content:', error));
+        updatePaginationButtons();
       }
 
       // Function to handle pagination button clicks
